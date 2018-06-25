@@ -1,0 +1,4 @@
+cfg_order_total_low_order_fee_tax_class_title = Attach Low Order Fee On Orders Made
+cfg_order_total_low_order_fee_tax_class_description = Attach low order fee for orders sent to the set destination
+
+cfg_tax_class_zone_none = --- none ---

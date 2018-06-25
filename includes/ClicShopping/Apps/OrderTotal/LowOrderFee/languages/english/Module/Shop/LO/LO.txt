@@ -1,0 +1,4 @@
+module_lo_title = Low Order Fee
+module_lo_public_title = Low Order Fee
+module_lo_short_title = Low Order Fee
+

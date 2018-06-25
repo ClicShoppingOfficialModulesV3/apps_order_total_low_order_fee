@@ -1,0 +1,6 @@
+cfg_order_total_low_order_fee_low_order_fee_title = Do you want to allow low order fees ?
+cfg_order_total_low_order_fee_low_order_fee_description = Allow Low Order Fee
+
+cfg_order_total_low_order_fee_low_order_fee_true = True
+cfg_order_total_low_order_fee_low_order_fee_false = False
+

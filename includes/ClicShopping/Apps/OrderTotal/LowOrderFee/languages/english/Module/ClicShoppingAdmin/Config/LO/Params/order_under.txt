@@ -1,0 +1,2 @@
+cfg_order_total_low_order_fee_order_under_title = Order Fee For Orders Under
+cfg_order_total_low_order_fee_order_under_description = Add the low order fee to orders under this amount.

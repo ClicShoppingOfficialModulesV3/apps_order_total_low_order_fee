@@ -1,0 +1,6 @@
+cfg_order_total_low_order_fee_destination_title = Attach Low Order Fee On Orders Made
+cfg_order_total_low_order_fee_destination_description = Attach low order fee for orders sent to the set destination
+
+cfg_order_total_low_order_fee_destination_national = National
+cfg_order_total_low_order_fee_destination_international = International
+cfg_order_total_low_order_fee_destination_both = Both
