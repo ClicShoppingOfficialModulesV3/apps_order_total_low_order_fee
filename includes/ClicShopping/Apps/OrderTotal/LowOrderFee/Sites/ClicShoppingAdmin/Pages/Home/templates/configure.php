@@ -2,8 +2,9 @@
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\Registry;
 
-
+  $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
   $CLICSHOPPING_LowOrderFee = Registry::get('LowOrderFee');
+
   $CLICSHOPPING_Page = Registry::get('Site')->getPage();
 
   $current_module = $CLICSHOPPING_Page->data['current_module'];
