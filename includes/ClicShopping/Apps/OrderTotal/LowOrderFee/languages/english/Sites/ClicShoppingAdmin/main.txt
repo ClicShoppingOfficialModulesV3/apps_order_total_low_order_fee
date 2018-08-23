@@ -7,7 +7,7 @@ text_configure =  Configure App Low Order Fee
 text_intro =  This app allow you to include a Low Order Fee on the order
 module_lo_introduction = This app allow you to include a Low Order Fee on the order
 
-button_back = Back
+button_sort_order = Sort order
 button_install_title = Install
 button_configure = Configure
 button_save = Save
