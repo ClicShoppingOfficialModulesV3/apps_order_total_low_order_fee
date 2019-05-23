@@ -1,13 +1,13 @@
 <?php
-/**
- *
- *  @copyright 2008 - https://www.clicshopping.org
- *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
- *  @Licence GPL 2 & MIT
- *  @licence MIT - Portion of osCommerce 2.4
- *  @Info : https://www.clicshopping.org/forum/trademark/
- *
- */
+  /**
+   *
+   * @copyright 2008 - https://www.clicshopping.org
+   * @Brand : ClicShopping(Tm) at Inpi all right Reserved
+   * @Licence GPL 2 & MIT
+   * @licence MIT - Portion of osCommerce 2.4
+   * @Info : https://www.clicshopping.org/forum/trademark/
+   *
+   */
 
   namespace ClicShopping\Apps\OrderTotal\LowOrderFee\Module\Total;
 
@@ -19,7 +19,8 @@
 
   use ClicShopping\Sites\Shop\Tax;
 
-  class LO implements \ClicShopping\OM\Modules\OrderTotalInterface  {
+  class LO implements \ClicShopping\OM\Modules\OrderTotalInterface
+  {
 
     public $code;
     public $title;
@@ -31,7 +32,8 @@
     public $surcharge;
     public $maximum;
 
-    public function __construct() {
+    public function __construct()
+    {
 
       if (!Registry::exists('LowOrderFee')) {
         Registry::set('LowOrderFee', new LowOrderFeeApp());
@@ -54,7 +56,8 @@
       $this->output = [];
     }
 
-    public function process() {
+    public function process()
+    {
 
       $CLICSHOPPING_Currencies = Registry::get('Currencies');
       $CLICSHOPPING_Order = Registry::get('Order');
@@ -63,16 +66,20 @@
       if (CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_LOW_ORDER_FEE == 'True') {
         switch (CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_DESTINATION) {
           case 'national':
-            if ($CLICSHOPPING_Order->delivery['country_id'] == STORE_COUNTRY) $pass = true; break;
+            if ($CLICSHOPPING_Order->delivery['country_id'] == STORE_COUNTRY) $pass = true;
+            break;
           case 'international':
-            if ($CLICSHOPPING_Order->delivery['country_id'] != STORE_COUNTRY) $pass = true; break;
+            if ($CLICSHOPPING_Order->delivery['country_id'] != STORE_COUNTRY) $pass = true;
+            break;
           case 'both':
-            $pass = true; break;
+            $pass = true;
+            break;
           default:
-            $pass = false; break;
+            $pass = false;
+            break;
         }
 
-        if ( ($pass === true) && ( ($CLICSHOPPING_Order->info['total'] - $CLICSHOPPING_Order->info['shipping_cost']) < CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_ORDER_UNDER) ) {
+        if (($pass === true) && (($CLICSHOPPING_Order->info['total'] - $CLICSHOPPING_Order->info['shipping_cost']) < CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_ORDER_UNDER)) {
           $tax = $CLICSHOPPING_Tax->getTaxRate(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_TAX_CLASS, $CLICSHOPPING_Order->delivery['country']['id'], $CLICSHOPPING_Order->delivery['zone_id']);
           $tax_description = $CLICSHOPPING_Tax->getTaxRateDescription(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE, $CLICSHOPPING_Order->delivery['country']['id'], $CLICSHOPPING_Order->delivery['zone_id']);
 
@@ -81,25 +88,29 @@
           $CLICSHOPPING_Order->info['total'] += CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE + $CLICSHOPPING_Tax->calculate(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE, $tax);
 
           $this->output[] = array('title' => $this->title . ':',
-                                  'text' => $CLICSHOPPING_Currencies->format(Tax::addTax(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE, $tax), true, $CLICSHOPPING_Order->info['currency'], $CLICSHOPPING_Order->info['currency_value']),
-                                  'value' => Tax::addTax(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE, $tax));
+            'text' => $CLICSHOPPING_Currencies->format(Tax::addTax(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE, $tax), true, $CLICSHOPPING_Order->info['currency'], $CLICSHOPPING_Order->info['currency_value']),
+            'value' => Tax::addTax(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_FEE, $tax));
         }
       }
     }
 
-    public function check() {
+    public function check()
+    {
       return defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS') && (trim(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS) != '');
     }
 
-    public function install() {
+    public function install()
+    {
       $this->app->redirect('Configure&Install&module=LO');
     }
 
-    public function remove() {
+    public function remove()
+    {
       $this->app->redirect('Configure&Uninstall&module=LO');
     }
 
-    public function keys() {
+    public function keys()
+    {
       return array('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER');
     }
   }
