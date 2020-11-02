@@ -32,7 +32,7 @@
         }
       }
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_cfg_saved_success'), 'success', 'LowOrderFee');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_cfg_saved_success'), 'success');
 
       $CLICSHOPPING_LowOrderFee->redirect('Configure&module=' . $current_module);
     }

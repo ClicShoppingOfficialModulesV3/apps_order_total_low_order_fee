@@ -35,7 +35,7 @@
 
       static::installDbMenuAdministration();
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_module_install_success'), 'success', 'LowOrderFee');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_module_install_success'), 'success');
 
       $CLICSHOPPING_LowOrderFee->redirect('Configure&module=' . $current_module);
     }

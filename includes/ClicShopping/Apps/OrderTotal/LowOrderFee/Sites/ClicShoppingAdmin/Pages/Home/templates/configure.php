@@ -22,8 +22,8 @@
 
   $CLICSHOPPING_LowOrderFee_Config = Registry::get('LowOrderFeeAdminConfig' . $current_module);
 
-  if ($CLICSHOPPING_MessageStack->exists('LowOrderFee')) {
-    echo $CLICSHOPPING_MessageStack->get('LowOrderFee');
+  if ($CLICSHOPPING_MessageStack->exists('main')) {
+    echo $CLICSHOPPING_MessageStack->get('main');
   }
 ?>
 <div class="contentBody">

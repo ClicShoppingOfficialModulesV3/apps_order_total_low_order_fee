@@ -27,7 +27,7 @@
       $m = Registry::get('LowOrderFeeAdminConfig' . $current_module);
       $m->uninstall();
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_module_uninstall_success'), 'success', 'LowOrderFee');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_module_uninstall_success'), 'success');
 
       $CLICSHOPPING_LowOrderFee->redirect('Configure&module=' . $current_module);
     }

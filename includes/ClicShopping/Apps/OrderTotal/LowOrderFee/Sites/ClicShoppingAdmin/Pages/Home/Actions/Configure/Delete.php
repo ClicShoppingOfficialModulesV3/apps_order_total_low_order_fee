@@ -31,7 +31,7 @@
 
       Cache::clear('menu-administrator');
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_module_uninstall_success'), 'success', 'app_order_total_low order fee');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_LowOrderFee->getDef('alert_module_uninstall_success'), 'success');
 
       $CLICSHOPPING_LowOrderFee->redirect('Configure&module=' . $current_module);
     }

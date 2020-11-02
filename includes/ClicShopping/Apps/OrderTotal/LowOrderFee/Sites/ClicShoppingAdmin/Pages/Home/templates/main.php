@@ -16,8 +16,8 @@
   $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
   $CLICSHOPPING_LowOrderFee = Registry::get('LowOrderFee');
 
-  if ($CLICSHOPPING_MessageStack->exists('LowOrderFee')) {
-    echo $CLICSHOPPING_MessageStack->get('LowOrderFee');
+  if ($CLICSHOPPING_MessageStack->exists('main')) {
+    echo $CLICSHOPPING_MessageStack->get('main');
   }
 ?>
 <div class="contentBody">
