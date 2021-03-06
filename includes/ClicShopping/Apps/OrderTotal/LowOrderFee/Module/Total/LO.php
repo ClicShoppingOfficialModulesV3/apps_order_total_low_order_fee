@@ -52,9 +52,9 @@
       $this->title = $this->app->getDef('module_lo_title');
       $this->public_title = $this->app->getDef('module_lo_public_title');
 
-      $this->enabled = defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS') && (CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS == 'True') ? true : false;
+      $this->enabled = \defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS') && (CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS == 'True') ? true : false;
 
-      $this->sort_order = defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER') && ((int)CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER > 0) ? (int)CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER : 0;
+      $this->sort_order = \defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER') && ((int)CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER > 0) ? (int)CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_SORT_ORDER : 0;
 
       $this->output = [];
     }
@@ -99,7 +99,7 @@
 
     public function check()
     {
-      return defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS') && (trim(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS) != '');
+      return \defined('CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS') && (trim(CLICSHOPPING_APP_ORDER_TOTAL_LOW_ORDER_FEE_LO_STATUS) != '');
     }
 
     public function install()
