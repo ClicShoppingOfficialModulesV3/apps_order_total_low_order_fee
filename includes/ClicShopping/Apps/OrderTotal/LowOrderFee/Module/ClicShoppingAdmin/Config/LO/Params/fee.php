@@ -16,7 +16,7 @@
 
     public $sort_order = 40;
     public $default = '5';
-    public $app_configured = true;
+    public bool $app_configured = true;
 
 //  'use_function' => 'currencies->format',
     protected function init()

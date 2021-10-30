@@ -1,0 +1,2 @@
+cfg_order_total_low_order_fee_order_under_title = Commande minimum avant d'appliquer les frais
+cfg_order_total_low_order_fee_order_under_description = Ajout un frais à partir d'une commande minimum

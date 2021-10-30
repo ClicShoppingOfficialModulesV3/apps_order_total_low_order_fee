@@ -21,14 +21,14 @@
 
   class LO implements \ClicShopping\OM\Modules\OrderTotalInterface
   {
-    public $code;
+    public string $code;
     public $title;
     public $description;
     public $enabled;
     public $group;
     public $output;
-    public $sort_order = 0;
-    public $app;
+    public ?int $sort_order = 0;
+    public mixed $app;
     public $surcharge;
     public $maximum;
     public $signature;

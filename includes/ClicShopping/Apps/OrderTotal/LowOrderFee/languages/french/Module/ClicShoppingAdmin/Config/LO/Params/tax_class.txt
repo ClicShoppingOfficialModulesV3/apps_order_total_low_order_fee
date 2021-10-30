@@ -1,0 +1,4 @@
+cfg_order_total_low_order_fee_tax_class_title = Classe de ttaxe
+cfg_order_total_low_order_fee_tax_class_description = Veuillez sélectionner la classe de taxes qui sera appliquée
+
+cfg_tax_class_zone_none = --- none ---

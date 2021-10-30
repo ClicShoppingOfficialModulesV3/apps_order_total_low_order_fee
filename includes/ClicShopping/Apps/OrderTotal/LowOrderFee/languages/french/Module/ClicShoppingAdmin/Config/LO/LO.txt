@@ -1,0 +1,3 @@
+module_lo_title = Frais sur commande
+module_lo_short_title = Frais sur commande
+module_lo_public_title = Frais sur commande

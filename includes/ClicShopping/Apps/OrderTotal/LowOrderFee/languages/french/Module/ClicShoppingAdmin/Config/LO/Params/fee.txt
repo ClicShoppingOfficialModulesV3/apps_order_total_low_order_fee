@@ -1,0 +1,2 @@
+cfg_order_total_low_order_fee_fee_title = Frais de commande miimale
+cfg_order_total_low_order_fee_fee_description = Frais de commande miimale
