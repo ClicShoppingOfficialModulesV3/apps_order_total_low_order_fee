@@ -14,7 +14,7 @@
   class fee extends \ClicShopping\Apps\OrderTotal\LowOrderFee\Module\ClicShoppingAdmin\Config\ConfigParamAbstract
   {
 
-    public $sort_order = 40;
+    public ?int $sort_order = 40;
     public $default = '5';
     public bool $app_configured = true;
 
