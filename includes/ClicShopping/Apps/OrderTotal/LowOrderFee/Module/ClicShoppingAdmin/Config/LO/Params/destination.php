@@ -17,7 +17,7 @@
   class destination extends \ClicShopping\Apps\OrderTotal\LowOrderFee\Module\ClicShoppingAdmin\Config\ConfigParamAbstract
   {
     public $default = 'True';
-    public $sort_order = 60;
+    public ?int $sort_order = 60;
 
 //    public $set_func = 'clic_cfg_set_tax_classes_pull_down_menu';
 

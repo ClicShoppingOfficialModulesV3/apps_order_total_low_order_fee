@@ -14,7 +14,7 @@
   class order_under extends \ClicShopping\Apps\OrderTotal\LowOrderFee\Module\ClicShoppingAdmin\Config\ConfigParamAbstract
   {
 
-    public $sort_order = 30;
+    public ?int $sort_order = 30;
     public $default = '50';
     public bool $app_configured = true;
 

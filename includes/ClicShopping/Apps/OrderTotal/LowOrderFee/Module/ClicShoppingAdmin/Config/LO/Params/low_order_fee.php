@@ -17,7 +17,7 @@
   class low_order_fee extends \ClicShopping\Apps\OrderTotal\LowOrderFee\Module\ClicShoppingAdmin\Config\ConfigParamAbstract
   {
     public $default = 'False';
-    public $sort_order = 20;
+    public ?int $sort_order = 20;
 
     protected function init()
     {
